@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('/accumulation')
+  async getAccumulation(): Promise<String> {
+    return await this.appService.example().toPromise();
+  }
 }
